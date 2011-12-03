@@ -17,11 +17,6 @@ module Postal
       raise_errors and raise Gmail::Client::ConnectionError, "Couldn't establish connection with IMAP service"
     end
 
-    def method_missing(method, *args, &block)
-      return @client.send(method, *args, &block) if @client.respond_to?(method)
-      super
-    end
-
     def fill_username(username)
       username
     end
