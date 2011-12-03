@@ -11,7 +11,6 @@ module Postal
     end
 
     def connect(raise_errors = false)
-      puts "Connecting to #{options[:imap_host]} at #{options[:imap_port]})"
       @imap = Net::IMAP.new(options[:imap_host], options[:imap_port], true, nil, false)
     rescue SocketError
       raise_errors and raise Gmail::Client::ConnectionError, "Couldn't establish connection with IMAP service"
