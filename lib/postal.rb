@@ -18,18 +18,18 @@ module Postal
     #
     #   Postal.new("postal@myimap.com", "secret_pass",
     #     Postal::GENERAL,
-    #     { :imap_server => "imap.myimap.com",
+    #     { :imap_host => "imap.myimap.com",
     #       :imap_port => 993,
-    #       :smtp_server => "smtp.myimap.com",
+    #       :smtp_host => "smtp.myimap.com",
     #       :smtp_port => 25 })
     #
     # Also it can be used with a block
     #
     #   Postal.new("postal@myimap.com", "secret_pass",
     #     Postal::GENERAL,
-    #     { :imap_server => "imap.myimap.com",
+    #     { :imap_host => "imap.myimap.com",
     #       :imap_port => 993,
-    #       :smtp_server => "smtp.myimap.com",
+    #       :smtp_host => "smtp.myimap.com",
     #       :smtp_port => 25 }) do |client|
     #     # .. do something here
     #   end
